@@ -1,0 +1,14 @@
+#splash > img{
+    margin-top: 60%;
+    height: 500px;
+    margin-left: calc(50% - 250px);
+    position: relative;
+    border-radius: 250px;
+}
+
+#splashcap {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 3rem;
+    position: relative;
+}

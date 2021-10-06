@@ -1,0 +1,22 @@
+{
+    "meta":{
+        "name":"创新五班",
+        "icon_url":"/res/abc.jpg",
+        "background_url":"",
+        "background_opacity":0.6
+    },
+    "main":{
+        "autodark":true,
+        "force_dark":false,
+        "accu_locationk e y":"59567",
+        "accu_apikey":"rEll1iMwdkjzyEvUbygkqUlD2lqqvlSu"
+    },
+    "cards":[
+        {"id":"classinfo","sourcetype":"external","source":"/res/cards/classinfo.html","classmotto":"我也不知道","cardbg":"/res/233.png"},
+        {"id":"weather","title":"天气","sourcetype":"external","source":"/res/cards/weathercard.html"}
+    ],
+    "cardorder":{
+        "classinfo":0,
+        "weather":1
+    }
+}
