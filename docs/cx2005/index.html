@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zerboard</title>
+</head>
+<body style="background-color:transparent;width:1080px;">
+    <div id="container" style="padding-left:50px;padding-right:50px;width:100%;font-size:67pt;color:#fff;">
+        <div id="time" style="float:left;"></div>
+        <div id="date" style="float:right;"></div>
+    </div>
+    <script>
+        function dateFilter(date){ //值小于10时，在前面补0
+    if(date < 10){
+        return "0"+date;
+    }
+    return date;
+}
+        setInterval(function(){
+            var dateobj = new Date;
+            var time = dateFilter(dateobj.getHours())+":"+dateFilter(dateobj.getMinutes());
+            var date = dateobj.getFullYear()+'年'+dateFilter(dateobj.getMonth()+1)+'月'+dateFilter(dateobj.getDay()+1)+'日';
+            document.getElementById('time').innerHTML = time;
+            document.getElementById('date').innerHTML = date;
+        },100)
+    </script>
+</body>
+</html>
