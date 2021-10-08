@@ -12,6 +12,7 @@ function getUrlParam(name) {
 
     var apikey = getUrlParam('akey');
     var locakey = getUrlParam('lock');
+    document.getElementById('temp').innerHTML = 已读取配置
     if(apikey != undefined&&locakey != undefined){
         $.ajax({url:'https://dataservice.accuweather.com/forecasts/v1/daily/1day/'+locakey+'?apikey='+apikey+'&language=zh-cn&metric=true',timeout:20000,success:function(result){
             display(result);
