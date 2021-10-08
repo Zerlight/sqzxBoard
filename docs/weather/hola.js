@@ -15,7 +15,8 @@ function getUrlParam(name) {
         .then(res => res.json())
         .then(json => show(json))
     }
-    function show(json){
+
+function show(json){
         document.getElementById('icon').innerHTML = '<img src="./Weathericons/'+json.DailyForecasts[0].Day.Icon+'.png" width="100">'
         document.getElementById('temp').innerHTML = json.DailyForecasts[0].Temperature.Minimum.Value+' / '+json.DailyForecasts[0].Temperature.Maximum.Value+'°C';
         document.getElementById('desc').innerHTML = json.DailyForecasts[0].Day.IconPhrase;
