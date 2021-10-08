@@ -10,7 +10,7 @@ function getUrlParam(name) {
     var apikey = getUrlParam('akey');
     var locakey = getUrlParam('lock');
     if(apikey != undefined&&locakey != undefined){
-        fetch('http://dataservice.accuweather.com/forecasts/v1/daily/1day/'+locakey+'?apikey='+apikey+'&language=zh-cn&metric=true')
+        fetch('https://dataservice.accuweather.com/forecasts/v1/daily/1day/'+locakey+'?apikey='+apikey+'&language=zh-cn&metric=true')
         .then(res => res.json())
         .then(json => show(json))
     }
