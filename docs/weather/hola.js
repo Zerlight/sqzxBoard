@@ -13,10 +13,9 @@ function getUrlParam(name) {
     if(apikey != undefined&&locakey != undefined){
         fetch('https://dataservice.accuweather.com/forecasts/v1/daily/1day/'+locakey+'?apikey='+apikey+'&language=zh-cn&metric=true')
         .then(res => res.json())
-        .then(json => show(json))
+        .then(json => display(json))
     }
-
-function show(json){
+function display(json){
         document.getElementById('icon').innerHTML = '<img src="./Weathericons/'+json.DailyForecasts[0].Day.Icon+'.png" width="100">'
         document.getElementById('temp').innerHTML = json.DailyForecasts[0].Temperature.Minimum.Value+' / '+json.DailyForecasts[0].Temperature.Maximum.Value+'°C';
         document.getElementById('desc').innerHTML = json.DailyForecasts[0].Day.IconPhrase;
