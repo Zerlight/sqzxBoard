@@ -7,6 +7,7 @@ function getUrlParam(name) {
         return undefined;
     }
 }
+
     var apikey = getUrlParam('akey');
     var locakey = getUrlParam('lock');
     if(apikey != undefined&&locakey != undefined){
