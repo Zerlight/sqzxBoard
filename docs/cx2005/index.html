@@ -16,8 +16,8 @@
 }
         setInterval(function(){
             var dateobj = new Date;
-            var time = dateFilter(dateobj.getHours())+"："+dateFilter(dateobj.getMinutes());
-            var date = dateobj.getFullYear()+'年'+dateFilter(dateobj.getMonth()+1)+'月'+dateFilter(dateobj.getDate()+1)+'日';
+            var time = dateFilter(dateobj.getHours())+":"+dateFilter(dateobj.getMinutes());
+            var date = dateobj.getFullYear()+'/'+dateFilter(dateobj.getMonth()+1)+'/'+dateFilter(dateobj.getDate()+1)+'/';
             document.getElementById('time').innerHTML = time;
             document.getElementById('date').innerHTML = date;
         },100)
