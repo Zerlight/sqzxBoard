@@ -8,8 +8,8 @@
     "main":{
         "autodark":true,
         "force_dark":false,
-        "accu_locationk e y":"59567",
-        "accu_apikey":"rEll1iMwdkjzyEvUbygkqUlD2lqqvlSu"
+        "accu_locationkey":"",
+        "accu_apikey":""
     },
     "cards":[
         {"id":"classinfo","sourcetype":"external","source":"/res/cards/classinfo.html","classmotto":"我也不知道","cardbg":"/res/233.png"},
