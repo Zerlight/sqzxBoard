@@ -1,3 +1,5 @@
+# This is broken! Only for Github pages!
+
 # Zerboard
 
 Developed by Zerlight,designed for HiteVision classboard.
