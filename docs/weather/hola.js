@@ -11,9 +11,14 @@ function getUrlParam(name) {
     var apikey = getUrlParam('akey');
     var locakey = getUrlParam('lock');
     if(apikey != undefined&&locakey != undefined){
-        fetch('https://dataservice.accuweather.com/forecasts/v1/daily/1day/'+locakey+'?apikey='+apikey+'&language=zh-cn&metric=true')
-        .then(res => res.json())
-        .then(json => display(json))
+        try{
+            fetch('https://dataservice.accuweather.com/forecasts/v1/daily/1day/'+locakey+'?apikey='+apikey+'&language=zh-cn&metric=true')
+            .then(res => res.json())
+            .then(json => display(json))
+        }
+        catch(e){
+            document.getElementById('container').innerHTML = '发生了错误：'+e;
+        }
     }
 function display(json){
         document.getElementById('icon').innerHTML = '<img src="./Weathericons/'+json.DailyForecasts[0].Day.Icon+'.png" width="100">'
