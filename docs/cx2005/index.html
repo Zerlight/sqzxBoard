@@ -17,7 +17,7 @@
         setInterval(function(){
             var dateobj = new Date;
             var time = dateFilter(dateobj.getHours())+":"+dateFilter(dateobj.getMinutes());
-            var date = dateobj.getFullYear()+'/'+dateFilter(dateobj.getMonth()+1)+'/'+dateFilter(dateobj.getDate()+1);
+            var date = dateobj.getFullYear()+'/'+dateFilter(dateobj.getMonth()+1)+'/'+dateFilter(dateobj.getDate());
             document.getElementById('time').innerHTML = time;
             document.getElementById('date').innerHTML = date;
         },100)
