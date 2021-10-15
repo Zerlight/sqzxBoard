@@ -5,15 +5,18 @@
     var apikey = 'rEll1iMwdkjzyEvUbygkqUlD2lqqvlSu'
     var locakey = 59567
     if(apikey != undefined&&locakey != undefined){
-        $.ajax({url:'https://dataservice.accuweather.com/forecasts/v1/daily/1day/'+locakey+'?apikey='+apikey+'&language=zh-cn&metric=true',timeout:20000,success:function(result){
+        $.ajax({url:'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'+locakey+'?apikey='+apikey+'&language=zh-cn&metric=true',timeout:20000,success:function(result){
             display(result);
         },error:function(err){
             document.getElementById('container').innerHTML = '发生了错误：'+e;
         }})
     }
 function display(json){
-        document.getElementById('icon').innerHTML = '<img src="./Weathericons/'+json.DailyForecasts[0].Day.Icon+'.png" width="100">'
-        document.getElementById('temp').innerHTML = json.DailyForecasts[0].Temperature.Minimum.Value+' / '+json.DailyForecasts[0].Temperature.Maximum.Value+'°C';
-        document.getElementById('desc').innerHTML = json.DailyForecasts[0].Day.IconPhrase;
+    $('#today .icon').html('<img src="./Weathericons/'+json.DailyForecasts[0].Day.Icon+'.png" width="100">');
+    $('#today .temp').html(json.DailyForecasts[0].Temperature.Minimum.Value+' / '+json.DailyForecasts[0].Temperature.Maximum.Value+'°C');
+    $('#today .desc').html(json.DailyForecasts[0].Day.IconPhrase);
+    $('#tomorrow .icon').html('<img src="./Weathericons/'+json.DailyForecasts[1].Day.Icon+'.png" width="100">');
+    $('#tomorrow .temp').html(json.DailyForecasts[1].Temperature.Minimum.Value+' / '+json.DailyForecasts[1].Temperature.Maximum.Value+'°C');
+    $('#tomorrow .desc').html(json.DailyForecasts[1].Day.IconPhrase);
     }
 
